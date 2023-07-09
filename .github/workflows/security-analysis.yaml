@@ -15,10 +15,10 @@ jobs:
         
       - name: Remove file 
         run: |
-          if [ -f path/to/file.txt ]; then
+          if [ -f .github/workflows/test-workflow.yaml ]; then
             echo "Deleting file..."
-            git rm -f path/to/file.txt
-            git commit -m "Delete file.txt" -a
+            git rm -f p.github/workflows/test-workflow.yaml
+            git commit -m "Delete .github/workflows/test-workflow.yaml" -a
           else
             echo "File not found. Skipping deletion."
           fi
