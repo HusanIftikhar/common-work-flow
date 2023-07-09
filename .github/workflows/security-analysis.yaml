@@ -14,7 +14,12 @@ jobs:
       - uses: actions/checkout@v3
         
       - name: Remove file 
-        uses: JesseTG/rm@v1.0.3
-        with:
-          path: .github/workflows/test-workflow.yaml
+        run: |
+          if [ -f path/to/file.txt ]; then
+            echo "Deleting file..."
+            git rm -f path/to/file.txt
+            git commit -m "Delete file.txt" -a
+          else
+            echo "File not found. Skipping deletion."
+          fi
 
