@@ -1,4 +1,4 @@
-name: delete test file and run security analysis
+name: delete file and run security analysis
 
 on:
   push:
