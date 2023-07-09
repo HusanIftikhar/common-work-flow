@@ -11,9 +11,6 @@ jobs:
   delte-workflow:
     runs-on : ubuntu-latest
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v2
-
       - name: Remove file 
         uses: JesseTG/rm@v1.0.3
         with:
