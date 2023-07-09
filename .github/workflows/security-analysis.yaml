@@ -1,0 +1,21 @@
+name: delete test file and run security analysis
+
+on:
+  push:
+    branches: [ main, master]
+
+  pull_request:
+     branches: [master]
+
+job:
+  build-workflow:
+    runs-on : ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Remove file 
+        uses: JesseTG/rm@v1.0.3
+        with:
+          path: ${{ github.workspace }}/.github/workflows/test-workflow.yaml
+

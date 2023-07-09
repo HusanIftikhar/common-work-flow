@@ -1,0 +1,21 @@
+name: Kiuwan Baseline Analysis
+
+on:
+ push:
+   branches: [ master, main]
+	
+
+   workflow_dispatch:
+
+ jobs:
+   build:
+     runs-on: ubuntu-latest
+
+     steps:
+      - uses: action/checkout@v2
+
+
+     -  name: test actions
+	  run: |
+             echo "this action" 
+ 
