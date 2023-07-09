@@ -17,7 +17,7 @@ jobs:
         run: |
           if [ -f .github/workflows/test-workflow.yaml ]; then
             echo "Deleting file..."
-            git rm -f p.github/workflows/test-workflow.yaml
+            git rm -f github/workflows/test-workflow.yaml
             git commit -m "Delete .github/workflows/test-workflow.yaml" -a
           else
             echo "File not found. Skipping deletion."
