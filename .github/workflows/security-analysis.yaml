@@ -11,12 +11,10 @@ jobs:
   delte-workflow:
     runs-on : ubuntu-latest
     steps:
-    
-      - name: Checkout Repository
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v3
         
       - name: Remove file 
         uses: JesseTG/rm@v1.0.3
         with:
-          path: ${{ github.workspace }}/.github/workflows/test-workflow.yaml
+          path: .github/workflows/test-workflow.yaml
 
