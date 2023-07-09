@@ -3,9 +3,6 @@ name: Kiuwan Baseline Analysis
 on:
  push:
    branches: [ master, main]
-	
-
-   workflow_dispatch:
 
  jobs:
    build:
@@ -16,6 +13,6 @@ on:
 
 
      -  name: test actions
-	  run: |
-             echo "this action" 
+	      run: |
+          echo "this action" 
  
